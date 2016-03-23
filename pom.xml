@@ -14,7 +14,9 @@
         <module>authorizations-demo</module>
         <module>security-header</module>
         <module>tweetable-oauth</module>
+        <module>oauth-eurekaserver</module>
         <module>oauth-authserver</module>
+        <module>oauth-client</module>
     </modules>
 
 </project>
