@@ -16,6 +16,7 @@
         <module>tweetable-oauth</module>
         <module>oauth-eurekaserver</module>
         <module>oauth-authserver</module>
+        <module>oauth-resource</module>
         <module>oauth-client</module>
         <module>saml-client</module>
     </modules>
