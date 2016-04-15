@@ -1,16 +1,9 @@
 package info.novatec.security.header.config;
 
 import java.net.URI;
-import java.util.Arrays;
-import java.util.Collections;
 
 import info.novatec.security.header.csp.ContentSecurityPolicyHeadersWriter;
 
-import org.apache.catalina.Context;
-import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
-import org.springframework.boot.context.embedded.tomcat.TomcatContextCustomizer;
-import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -37,20 +30,38 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure ( HttpSecurity http ) throws Exception {
-        http
-                .headers ().xssProtection ().xssProtectionEnabled ( true ).block ( false ).and ()
+
+
+                //http.headers ().disable ();
+
+                //http.headers ().xssProtection ().xssProtectionEnabled ( true ).block ( false );
+
+                //http.headers ().contentSecurityPolicy ( "default-src 'self'; report-uri /csp-report-endpoint/" );
 
 /*
-                .headers ()
+                http.headers ()
                 .addHeaderWriter (
                         ContentSecurityPolicyHeadersWriter
                                 .create ()
                                 .defaultSource ( "'self'" )
                                 .reportUri ( new URI ( "https://localhost:9099/report" ) )
-                                .reportOnly () )
+                                .reportOnly () );
 */
-                .and ()
-                .formLogin ().permitAll ()
+
+                /*http.headers ().httpPublicKeyPinning ().addSha256Pins ( "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAqIlIK+0HWok4D9j94FqG" +
+                        "e9xf7HvfpmwisK7gFTwVsrlGU7JGVmPRNdV3RuQl2KFpzwtfmXm0qlwSmsMmkgYq" +
+                        "o+IyVYMziQGjZpyHxlg5d96sGTtU4Y+PLSkQJuPQT01ZoQlMv1wbQ/SpDszgveTV" +
+                        "y8WThygMtrN6AcSxYpxk1XBZ6eGsVZD1rgWaIlpfHAPBhH7DALuUDMKf8YYpcYVr" +
+                        "ViedVMojoAEf1XAE4fyeL3kBBpoKXi5uC/1HPxX8SPphzfblXW1nDKK7EaDJZxxT" +
+                        "qTCA0IK4MCcMXhPaVdEfbpX6fJo8RvXPBxYAORhq92FPS3VUIDDxrQSQdWegADAk" +
+                        "HuixJuUikBO92YtXDSulYCQApOcku0A7vdZ5jMrAr7jbbgyQtZxVcXnEPYTXJOC5" +
+                        "fkqfNy3dzqTvfour4sw+cClt/UdgimwOWrKIuEl/SOsaaouQsafPShN4pye2CAe3" +
+                        "MqoGQezJMEsbjyEaluH6myDkmMEkJZGXZL9tZX+A4K7vkZYS4aOI3ol1OlmE2fgY" +
+                        "h6ANEFFI0ewoW76rvKxI/Ekc2EQW2SeDnXTgOxxG3daJMw+h+tip56dxm9qrwGrO" +
+                        "qwbgzx6/L7D5UodTsNnaqc1ly94ed4qm9MTcErUh8qKzhdSSYOmtemX+iMpPUwFE" +
+                        "i9/mEYI2VC+3OmYcVswP42cCAwEAAQ==" ).reportUri ( "http://example.net/pkp-report" ).reportOnly ( true );*/
+
+                http.formLogin ().permitAll ()
                 .and ()
                 .authorizeRequests ()
                 .antMatchers ( "/report" ).permitAll ()

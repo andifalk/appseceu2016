@@ -18,6 +18,7 @@
         <module>oauth-authserver</module>
         <module>oauth-resource</module>
         <module>oauth-client</module>
+        <module>oauth-social</module>
         <module>saml-client</module>
     </modules>
 

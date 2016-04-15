@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>info.novatec</groupId>
-	<artifactId>oauth-authserver</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<artifactId>oauth-social</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>oauth-authserver</name>
-	<description>OAuth2 Authorization Server</description>
+	<name>oauth-social</name>
+	<description>Demo for social login using facbook</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -26,7 +26,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -37,14 +37,10 @@
 			<artifactId>spring-security-oauth2</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-jwt</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<optional>true</optional>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -60,5 +56,6 @@
 			</plugin>
 		</plugins>
 	</build>
+	
 
 </project>
