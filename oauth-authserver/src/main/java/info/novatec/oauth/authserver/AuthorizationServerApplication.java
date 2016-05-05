@@ -8,8 +8,8 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 /**
  * Authorization server.
  */
-@EnableAuthorizationServer
-@EnableResourceServer
+/*@EnableAuthorizationServer
+@EnableResourceServer*/
 @SpringBootApplication
 public class AuthorizationServerApplication {
 

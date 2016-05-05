@@ -1,12 +1,12 @@
-package info.novatec;
+package info.novatec.appsensor;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SamlClientApplication {
+public class AppsensorDemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SamlClientApplication.class, args);
+		SpringApplication.run(AppsensorDemoApplication.class, args);
 	}
 }

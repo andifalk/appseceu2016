@@ -1,15 +1,13 @@
-package info.novatec;
+package info.novatec.appsensor;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = SamlClientApplication.class)
-@WebAppConfiguration
-public class SamlClientApplicationTests {
+@SpringApplicationConfiguration(classes = AppsensorDemoApplication.class)
+public class AppsensorDemoApplicationTests {
 
 	@Test
 	public void contextLoads() {
