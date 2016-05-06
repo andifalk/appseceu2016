@@ -13,6 +13,7 @@
         <module>five-minute-security</module>
         <module>authorizations-demo</module>
         <module>security-header</module>
+        <module>csrf-demo</module>
         <module>tweetable-oauth</module>
         <module>oauth-authserver</module>
         <module>oauth-resource</module>
