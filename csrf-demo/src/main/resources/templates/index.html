@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <title>appseceu2016</title>
+</head>
+<body>
+
+    <ul>
+        <li><a href="createform">Create person via POST request</a></li>
+        <li><a th:href="@{/create(firstname='hello',lastname='world',_csrf=${_csrf.token})}">Create person via GET request</a></li>
+        <li><a href="person?id=2">Get a person</a></li>
+        <li><a href="persons">List of persons</a></li>
+    </ul>
+
+    <form method="post" th:action="@{/logout}">
+        <input type="submit" value="Logout"/>
+    </form>
+
+</body>
+</html>

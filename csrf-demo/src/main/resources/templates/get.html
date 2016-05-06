@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>appseceu2016</title>
+</head>
+<body>
+    <a href="/csrf-demo">Index</a>
+    <hr/>
+    <img src="http://localhost:9090/csrf-demo/create?firstname=hidden&amp;lastname=creation" hidden="true" />
+    <span th:text="${firstname}">first name</span>
+    <span th:text="${lastname}">last name</span>
+</body>
+</html>

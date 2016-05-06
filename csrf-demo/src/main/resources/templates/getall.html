@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>appseceu2016</title>
+</head>
+<body>
+    <a href="/csrf-demo">Index</a>
+    <hr/>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="pers : ${allPersons}">
+            <td th:text="${pers.id}">0</td>
+            <td th:text="${pers.firstname}">n/a</td>
+            <td th:text="${pers.lastname}">n/a</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

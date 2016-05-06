@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>appseceu2016</title>
+</head>
+<body>
+<a href="/csrf-demo">Index</a>
+<hr/>
+
+<form th:action="@{/create}" th:object="${person}" id="myForm" method="post">
+        <label for="firstname">First name</label>
+        <input id="firstname" name="firstname" type="text" th:field="*{firstname}" />
+        <label for="lastname">Last name</label>
+        <input id="lastname" name="lastname" type="text" th:field="*{lastname}" />
+        <input id="submit" name="submit" type="submit" value="Store" />
+    </form>
+
+</body>
+</html>
