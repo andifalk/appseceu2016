@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Reflected XSS</title>
+</head>
+<body>
+    <p>
+    <a href="/">Index</a>
+    </p>
+    <span th:utext="${message}">Message</span>
+</body>
+</html>

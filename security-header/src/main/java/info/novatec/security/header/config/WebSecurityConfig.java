@@ -34,9 +34,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
                 //http.headers ().disable ();
 
-                //http.headers ().xssProtection ().xssProtectionEnabled ( true ).block ( false );
+                //http.headers ().xssProtection ().xssProtectionEnabled ( false ).block ( false );
 
-                //http.headers ().contentSecurityPolicy ( "default-src 'self'; report-uri /csp-report-endpoint/" );
+                //http.headers ().contentSecurityPolicy ( "default-src 'self'; report-uri /report/" );
 
 /*
                 http.headers ()
@@ -59,7 +59,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "MqoGQezJMEsbjyEaluH6myDkmMEkJZGXZL9tZX+A4K7vkZYS4aOI3ol1OlmE2fgY" +
                         "h6ANEFFI0ewoW76rvKxI/Ekc2EQW2SeDnXTgOxxG3daJMw+h+tip56dxm9qrwGrO" +
                         "qwbgzx6/L7D5UodTsNnaqc1ly94ed4qm9MTcErUh8qKzhdSSYOmtemX+iMpPUwFE" +
-                        "i9/mEYI2VC+3OmYcVswP42cCAwEAAQ==" ).reportUri ( "http://example.net/pkp-report" ).reportOnly ( true );*/
+                        "i9/mEYI2VC+3OmYcVswP42cCAwEAAQ==" ).reportUri ( "http://example.net/pkp-report" ).reportOnly ( true );
+                        */
 
                 http.formLogin ().permitAll ()
                 .and ()
