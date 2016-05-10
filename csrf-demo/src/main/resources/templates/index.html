@@ -9,7 +9,7 @@
 <body>
 
     <ul>
-        <li><a href="createform">Create person via POST request</a></li>
+        <li><a href="postform">Create person via POST request</a></li>
         <li><a th:href="@{/create(firstname='hello',lastname='world',_csrf=${_csrf.token})}">Create person via GET request</a></li>
         <li><a href="person?id=2">Get a person</a></li>
         <li><a href="persons">List of persons</a></li>

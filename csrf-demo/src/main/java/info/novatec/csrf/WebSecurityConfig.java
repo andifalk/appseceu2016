@@ -7,7 +7,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * Created by AFA on 06.05.2016.
+ * Security configuration for CSRF.
  */
 @Configuration
 @EnableWebSecurity
@@ -15,9 +15,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure ( HttpSecurity http ) throws Exception {
-        http
-                //.csrf ().disable ()
-                .csrf ().requireCsrfProtectionMatcher (
+
+                //http.csrf ().disable ()
+                http.csrf ().requireCsrfProtectionMatcher (
                     request -> RequestMethod.POST.name ().equals (request.getMethod ())
                             || ( request.getRequestURI () != null && request.getRequestURI ().contains ( "create" )) );
                 http.authorizeRequests ().anyRequest ().fullyAuthenticated ()

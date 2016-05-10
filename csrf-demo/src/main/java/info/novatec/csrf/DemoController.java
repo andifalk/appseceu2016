@@ -65,7 +65,7 @@ public class DemoController {
     }
 
 
-    @RequestMapping(path = "/createform", method = RequestMethod.GET)
+    @RequestMapping(path = "/postform", method = RequestMethod.GET)
     public String postForm() {
         return "post";
     }
