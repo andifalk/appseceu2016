@@ -23,7 +23,7 @@ public class OAuthSocialApplication {
 	@RequestMapping(path = "/")
 	public String index() {
         OAuth2Authentication details = (OAuth2Authentication) SecurityContextHolder.getContext ().getAuthentication ();
-        Object name = ((Map) details.getUserAuthentication ().getDetails ()).get ( "name" );
-        return "Authenticated user: " + name;
+		Map userDetails = (Map) details.getUserAuthentication ().getDetails ();
+		return String.format ( "Authenticated user: %s (%s)", userDetails.get ( "name" ), userDetails.get ( "email" ) );
 	}
 }
