@@ -51,8 +51,5 @@ and can only be accessed using a valid oauth access token.
 This is the client part that calls the provided restful service of the resource server and
 requests an access token from authorization server.
 
-## OAuth social
-This module shows OAuth2 integration with well known identity providers like Facebook and Google.
-
 ## Appsensor demo
 This shows a quick demo implementing real time protection using [OWASP AppSensor](http://appsensor.org/) project.
