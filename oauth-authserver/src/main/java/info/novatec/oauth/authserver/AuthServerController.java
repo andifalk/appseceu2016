@@ -1,9 +1,8 @@
 package info.novatec.oauth.authserver;
 
-import java.security.Principal;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import java.security.Principal;
 
 /**
  * Rest controller for authorization server..
@@ -11,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AuthServerController {
 
-    @RequestMapping ("/info")
+    @RequestMapping ("/")
     public String home() {
         return "This is the authorization server";
     }

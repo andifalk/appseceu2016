@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 
-CODE=1234
-curl acme:acmesecret@localhost:9999/uaa/oauth/token -d grant_type=authorization_code -d client_id=demo -d redirect_uri=http://localhost -d code=$CODE
+echo get token
+
+curl demo:demo_secret@localhost:9090/uaa/oauth/token -d grant_type=password -d username=user -d password=secret
+
+echo .
+echo
+
