@@ -6,8 +6,10 @@
 </head>
 <body>
     <p>
-    <a href="/">Index</a>
+    <a href="/headers">Index</a>
     </p>
+
+    <!-- Unsafe thymeleaf operation without escaping, always use 'text'!!! -->
     <span th:utext="${message}">Message</span>
 </body>
 </html>

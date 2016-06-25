@@ -11,6 +11,7 @@
 
     <modules>
         <module>five-minute-security</module>
+        <module>advanced-security</module>
         <module>authorizations-demo</module>
         <module>security-header</module>
         <module>csrf-demo</module>
@@ -18,7 +19,6 @@
         <module>oauth-authserver</module>
         <module>oauth-resource</module>
         <module>oauth-client</module>
-        <module>appsensor-demo</module>
     </modules>
 
 </project>

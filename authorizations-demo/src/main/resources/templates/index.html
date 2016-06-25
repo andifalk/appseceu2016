@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>AppSecEU2016 Authorization Demo</title>
+</head>
+<body>
+
+    <ul>
+        <li><a href="/">Home (USER Role)</a></li>
+        <li><a href="admin">Administration Service (ADMIN Role)</a></li>
+<!--
+        <li><a href="hidden">Hidden Service (Should be secured)</a></li>
+-->
+    </ul>
+
+    <form method="post" th:action="@{/logout}">
+        <input type="submit" value="Logout"/>
+    </form>
+</body>
+</html>

@@ -1,13 +1,15 @@
-package info.novatec.appsensor;
+package info.novatec;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = AppsensorDemoApplication.class)
-public class AppsensorDemoApplicationTests {
+@SpringApplicationConfiguration(classes = AdvancedSecurityApplication.class)
+@WebAppConfiguration
+public class AdvancedSecurityApplicationTests {
 
 	@Test
 	public void contextLoads() {

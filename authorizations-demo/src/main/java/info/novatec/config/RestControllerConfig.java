@@ -14,10 +14,10 @@ public class RestControllerConfig {
     @Autowired
     private HelloService helloService;
 
-    @RequestMapping (path = "/")
+    /*@RequestMapping (path = "/")
     public String user() {
         return helloService.user ();
-    }
+    }*/
 
     @RequestMapping(path = "/admin")
     public String admin() {
