@@ -24,7 +24,7 @@ public class DefaultHelloServiceImpl implements HelloService {
     /*
      * This is only secured by method layer security
      */
-    //@Secured ( "ROLE_ADMIN" )
+    @Secured ( "ROLE_ADMIN" )
     @Override
     public String hidden() {
         return "Hidden Admin access";
