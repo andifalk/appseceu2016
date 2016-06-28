@@ -1,12 +1,20 @@
-# appseceu2016
+# AppSecEU2016
 
-This github repository contains all demos for AppSecEU 2016 in Rome.
+This github repository contains all demos
+for [AppSecEU 2016](http://2016.appsec.eu) in Rome.
 
 ## Five minute security
 This module shows a basically automatically generated secure web application
 using spring boot and spring security. This has been generated
 via [start.spring.io](http://start.spring.io). Only user password has been
 configured afterwards to avoid copying generated password after each server start.
+
+## Advanced security
+This module shows a bit more _real-world_ security configuration made of...
+
+* ...persistent user (JPA entity) with username and password
+* ...UserDetailsService to connect spring security to persistent user entity
+* ...PasswordEncoder to encrypt and check the user password using BCrypt
 
 ## Authorizations demo
 This module shows how to add the following features to basic 5 minute security module:
@@ -50,6 +58,3 @@ and can only be accessed using a valid oauth access token.
 ### Client
 This is the client part that calls the provided restful service of the resource server and
 requests an access token from authorization server.
-
-## Appsensor demo
-This shows a quick demo implementing real time protection using [OWASP AppSensor](http://appsensor.org/) project.

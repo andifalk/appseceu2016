@@ -17,10 +17,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure ( HttpSecurity http ) throws Exception {
 
                 //http.csrf ().disable ()
-                http.csrf ().requireCsrfProtectionMatcher (
+
+        /*        http.csrf ().requireCsrfProtectionMatcher (
                     request -> RequestMethod.POST.name ().equals (request.getMethod ())
                             || ( request.getRequestURI () != null && request.getRequestURI ().contains ( "create" )) );
-                http.authorizeRequests ().anyRequest ().fullyAuthenticated ()
+*/
+
+        http.authorizeRequests ().anyRequest ().fullyAuthenticated ()
                 .and ()
                 .httpBasic ().disable ()
                 .formLogin ().permitAll ()

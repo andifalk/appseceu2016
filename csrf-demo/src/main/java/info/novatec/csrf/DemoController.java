@@ -1,5 +1,7 @@
 package info.novatec.csrf;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,10 +16,12 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * Created by AFA on 06.05.2016.
+ * Controller for persons.
  */
 @Controller
 public class DemoController {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(DemoController.class);
 
     private final PersonService personService;
 
@@ -38,6 +42,9 @@ public class DemoController {
 
     @RequestMapping( path = "/create", method = RequestMethod.POST)
     public String createPersonPost( @RequestBody MultiValueMap<String,String> values, Model model ) {
+
+        LOGGER.info("createPersonPost({})", values);
+
         model.addAttribute ( "message", "Hello AppSec" );
 
         final String firstname = values.toSingleValueMap ().get ( "firstname" );
@@ -55,6 +62,8 @@ public class DemoController {
     public String createPersonGet(
             @RequestParam("firstname") String firstName,
             @RequestParam("lastname") String lastName, Model model ) {
+
+        LOGGER.info("createPersonGet({},{})", firstName, lastName);
 
         final Person person = personService.create ( firstName, lastName );
         if (person != null) {
@@ -74,6 +83,9 @@ public class DemoController {
 
     @RequestMapping( path = "/person")
     public String getPerson( @RequestParam("id") int id, Model model) {
+
+        LOGGER.info("getPerson({})", id);
+
         final Person person = personService.findById ( id );
         if (person != null) {
             model.addAttribute ( "firstname", person.getFirstname () );
@@ -83,7 +95,10 @@ public class DemoController {
     }
 
     @RequestMapping( path = "/persons")
-    public String getPersonen(Model model) {
+    public String getPersons(Model model) {
+
+        LOGGER.info("getPersons()");
+
         final Collection<Person> persons = personService.findAll ();
         if (persons != null) {
             model.addAttribute ( "allPersons", persons );
