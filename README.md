@@ -3,6 +3,8 @@
 This github repository contains all demos
 for [AppSecEU 2016](http://2016.appsec.eu) in Rome.
 
+The slides can be downloaded from [here](https://github.com/andifalk/appseceu2016/raw/master/appseceu-2016-building-secure-cloud-native-apps-spring.pdf) as well.
+
 ## Five minute security
 This module shows a basically automatically generated secure web application
 using spring boot and spring security. This has been generated
